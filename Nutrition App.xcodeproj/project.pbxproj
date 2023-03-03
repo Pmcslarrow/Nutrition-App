@@ -7,18 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0F67AB299F3111008D5800 /* recipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0F67AA299F3111008D5800 /* recipeView.swift */; };
+		3F234FEE29A98BCD00CD9C01 /* CalorieAdder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F234FED29A98BCD00CD9C01 /* CalorieAdder.swift */; };
 		3FC973EE2999F024003944EB /* Nutrition_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC973ED2999F024003944EB /* Nutrition_AppApp.swift */; };
 		3FC973F02999F024003944EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC973EF2999F024003944EB /* ContentView.swift */; };
 		3FC973F22999F025003944EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC973F12999F025003944EB /* Assets.xcassets */; };
 		3FC973F52999F025003944EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC973F42999F025003944EB /* Preview Assets.xcassets */; };
+		3FC97400299B5A31003944EB /* homepageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC973FF299B5A31003944EB /* homepageView.swift */; };
+		3FC97404299B5B7C003944EB /* fetchHealthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC97403299B5B7C003944EB /* fetchHealthData.swift */; };
+		3FEFE122299CBB1100D32F94 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FEFE121299CBB1100D32F94 /* Poppins-Medium.ttf */; };
+		3FEFE125299CC2B400D32F94 /* GoalBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEFE124299CC2B400D32F94 /* GoalBuilderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F0F67AA299F3111008D5800 /* recipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipeView.swift; sourceTree = "<group>"; };
+		3F234FED29A98BCD00CD9C01 /* CalorieAdder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieAdder.swift; sourceTree = "<group>"; };
 		3FC973EA2999F024003944EB /* Nutrition App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nutrition App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC973ED2999F024003944EB /* Nutrition_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrition_AppApp.swift; sourceTree = "<group>"; };
 		3FC973EF2999F024003944EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3FC973F12999F025003944EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FC973F42999F025003944EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3FC973FB2999F049003944EB /* Nutrition App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Nutrition App.entitlements"; sourceTree = "<group>"; };
+		3FC973FE2999FA2B003944EB /* Nutrition-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Nutrition-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3FC973FF299B5A31003944EB /* homepageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepageView.swift; sourceTree = "<group>"; };
+		3FC97403299B5B7C003944EB /* fetchHealthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetchHealthData.swift; sourceTree = "<group>"; };
+		3FEFE121299CBB1100D32F94 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Medium.ttf"; path = "../../../../Downloads/Poppins/Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		3FEFE123299CBC0100D32F94 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		3FEFE124299CC2B400D32F94 /* GoalBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalBuilderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +66,17 @@
 		3FC973EC2999F024003944EB /* Nutrition App */ = {
 			isa = PBXGroup;
 			children = (
+				3FC973FE2999FA2B003944EB /* Nutrition-App-Info.plist */,
+				3FC973FB2999F049003944EB /* Nutrition App.entitlements */,
 				3FC973ED2999F024003944EB /* Nutrition_AppApp.swift */,
 				3FC973EF2999F024003944EB /* ContentView.swift */,
+				3FC97403299B5B7C003944EB /* fetchHealthData.swift */,
+				3FC973FF299B5A31003944EB /* homepageView.swift */,
+				3F234FED29A98BCD00CD9C01 /* CalorieAdder.swift */,
+				3FEFE124299CC2B400D32F94 /* GoalBuilderView.swift */,
+				3F0F67AA299F3111008D5800 /* recipeView.swift */,
 				3FC973F12999F025003944EB /* Assets.xcassets */,
+				3FEFE123299CBC0100D32F94 /* Poppins-Medium.ttf */,
 				3FC973F32999F025003944EB /* Preview Content */,
 			);
 			path = "Nutrition App";
@@ -63,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				3FC973F42999F025003944EB /* Preview Assets.xcassets */,
+				3FEFE121299CBB1100D32F94 /* Poppins-Medium.ttf */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -125,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FEFE122299CBB1100D32F94 /* Poppins-Medium.ttf in Resources */,
 				3FC973F52999F025003944EB /* Preview Assets.xcassets in Resources */,
 				3FC973F22999F025003944EB /* Assets.xcassets in Resources */,
 			);
@@ -138,7 +163,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FC973F02999F024003944EB /* ContentView.swift in Sources */,
+				3FC97400299B5A31003944EB /* homepageView.swift in Sources */,
+				3FC97404299B5B7C003944EB /* fetchHealthData.swift in Sources */,
 				3FC973EE2999F024003944EB /* Nutrition_AppApp.swift in Sources */,
+				3F234FEE29A98BCD00CD9C01 /* CalorieAdder.swift in Sources */,
+				3F0F67AB299F3111008D5800 /* recipeView.swift in Sources */,
+				3FEFE125299CC2B400D32F94 /* GoalBuilderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,14 +294,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Nutrition App/Nutrition App.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nutrition App/Preview Content\"";
 				DEVELOPMENT_TEAM = B7U38C9ZWA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Nutrition-App-Info.plist";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to HealthKit data to track your health information.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires access to HealthKit data to update your health information.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -282,6 +316,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.willamette.pdmcslarrow.Nutrition-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -293,14 +328,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Nutrition App/Nutrition App.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nutrition App/Preview Content\"";
 				DEVELOPMENT_TEAM = B7U38C9ZWA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Nutrition-App-Info.plist";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to HealthKit data to track your health information.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires access to HealthKit data to update your health information.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -311,6 +350,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.willamette.pdmcslarrow.Nutrition-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

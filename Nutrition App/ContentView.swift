@@ -1,21 +1,25 @@
-//
-//  ContentView.swift
-//  Nutrition App
-//
-//  Created by Paul McSlarrow on 2/12/23.
-//
-
+import Foundation
 import SwiftUI
+import HealthKit
+ 
 
 struct ContentView: View {
+    @ObservedObject var viewModel = HealthData()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+            if viewModel.isAuthorized {
+                VStack {
+                    homepageView(viewModel: viewModel)
+                }
+            } else {
+                VStack {
+                    Button(action: viewModel.requestAccess) {
+                        Text("Request HealthKit Access")
+                    }.padding()
+                    Text("For a more accurate experience, please go update any data inside your Health App (height, weight, etc...)").multilineTextAlignment(.center).padding(.all, 50.0)
+                }
+                
+            }
     }
 }
 
