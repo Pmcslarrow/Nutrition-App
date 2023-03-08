@@ -37,6 +37,15 @@ struct HealthObject {
     var CURRENT_GOAL: String = "none"
 }
 
+struct Recipe {
+    var title: String
+    var nCalories: String
+    var protein: String
+    var fat: String
+    var carbs: String
+    var url: String
+}
+
 // ViewModel
 class HealthData: ObservableObject {
     
@@ -98,10 +107,21 @@ class HealthData: ObservableObject {
     var CALORIES_EATEN: Double {
         model.CALORIES_EATEN
     }
-    
 
-    
     var bgColor = Color(.sRGB, red: 0.94, green: 0.54, blue: 0.15)
+    
+    let list_of_recipes: [Recipe] = [
+        Recipe(title: "Honey Garlic Chicken", nCalories: "258", protein: "25", fat: "12", carbs:"18", url:"https://www.delish.com/cooking/recipe-ideas/recipes/a49507/honey-garlic-chicken-recipe/"),
+        Recipe(title: "One Pot Chicken Alfredo", nCalories: "444", protein: "35", fat: "21", carbs: "43", url: "https://www.eatingwell.com/recipe/275290/one-pot-chicken-alfredo/"),
+        Recipe(title: "Salted Peanut Butter Smoothie", nCalories: "854", protein: "22", fat: "9", carbs: "55", url: "https://www.purewow.com/recipes/Salted-Peanut-Butter-Cup-Smoothie"),
+        Recipe(title: "Strawberry Protein Shake", nCalories: "309", protein: "21", fat: "7", carbs: "43", url: "https://feelgoodfoodie.net/recipe/organic-strawberry-sweet-vanilla-smoothie/"),
+        Recipe(title: "Steak Burrito Bowl", nCalories: "549", protein: "32", fat: "24", carbs: "49", url: "https://www.bbcgoodfood.com/recipes/steak-burrito-bowl"),
+        Recipe(title: "Oven Baked Pork Chops", nCalories: "805", protein: "46", fat: "38", carbs: "67", url: "https://www.bbcgoodfood.com/recipes/oven-baked-pork-chops"),
+        Recipe(title: "Protein Pancakes", nCalories: "258", protein: "32", fat: "10", carbs: "5", url: "https://healthyrecipesblogs.com/protein-pancakes/"),
+        Recipe(title: "Peanut Butter Energy Bites", nCalories: "200", protein: "6", fat: "13", carbs: "16", url: "https://chefsavvy.com/5-ingredient-peanut-butter-energy-bites/"),
+        Recipe(title: "Pulled Pork Sandwich", nCalories: "303", protein: "10", fat: "17", carbs: "29", url: "https://www.kimscravings.com/easy-pulled-pork-sliders/"),
+        Recipe(title: "Baked Salmon", nCalories: "250", protein: "29", fat: "18", carbs: "1", url: "https://www.primaverakitchen.com/garlic-butter-salmon-in-foil-recipe/")
+    ]
 
     func requestAccess() {
         let healthStore = HKHealthStore()

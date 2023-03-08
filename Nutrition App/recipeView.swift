@@ -19,9 +19,9 @@ struct recipeView: View {
                 if viewModel.CURRENT_GOAL == "maintain" {
                     goalify(string: String(format: "%.2f", self.viewModel.TDEE), viewModel: viewModel)
                 } else if viewModel.CURRENT_GOAL == "lose" {
-                    goalify(string: String(format: "%.2f", self.viewModel.TDEE - 500.0), viewModel: viewModel)
+                    goalify(string: String(format: "%.2f", self.viewModel.TDEE - 300.0), viewModel: viewModel)
                 } else if viewModel.CURRENT_GOAL == "gain" {
-                    goalify(string: String(format: "%.2f", self.viewModel.TDEE + 500.0), viewModel: viewModel)
+                    goalify(string: String(format: "%.2f", self.viewModel.TDEE + 300.0), viewModel: viewModel)
                 }
             }.padding()
         }
@@ -50,21 +50,77 @@ struct goalify: View {
                     
                     Text("It is recommended that about 50% of the plate filled with vegetables and fruits; 25% of the plate is filled with whole grains or complex carbohydrates; and about 25% of the plate filled with lean protein such as chicken, fish, beans, or tofu").foregroundColor(.white)
                         .padding()
-                        .font(Font.custom("Poppins-Medium", size: 15))
+                        .font(Font.custom("Poppins-Medium", size: 13))
                 }.padding()
             }
-            .padding()
             .font(Font.custom("Poppins-Medium", size: 50))
             
-            Spacer()
             
             /* Card Containing number of calories left to eat today */
             ZStack {
                 RoundedRectangle(cornerRadius: 20).foregroundColor(CustomColor.myDarkGreen)
                 GoalCircle(caloriesPerDay: string, viewModel: viewModel)
             }
-            .padding()
             .font(Font.custom("Poppins-Medium", size: 15))
+            
+            
+            
+            // Recipe list
+            ZStack {
+                RoundedRectangle(cornerRadius: 20).foregroundColor(CustomColor.myDarkGreen)
+                ScrollView (.horizontal){
+                    HStack {
+                        ForEach(self.viewModel.list_of_recipes, id: \.title) { dataPoint in
+                            RecipeCardify(
+                                title: dataPoint.title,
+                                nCalories: dataPoint.nCalories,
+                                protein: dataPoint.protein,
+                                fat: dataPoint.fat,
+                                carbs: dataPoint.carbs,
+                                url: dataPoint.url)
+                        }
+                        
+                    }.padding()
+                }
+            }
+            .font(Font.custom("Poppins-Medium", size: 15))
+        }
+    }
+}
+
+struct RecipeCardify: View {
+    var title:     String
+    var nCalories: String
+    var protein:   String
+    var fat:       String
+    var carbs:     String
+    var url:       String
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 40, style: .continuous)
+                .fill(CustomColor.myLightGreen)
+                .frame(width: 170, height: 200)
+            
+            VStack {
+                HStack {
+                    Text("P: \(protein)g")
+                    Spacer()
+                    Text("F: \(fat)g")
+                }.padding()
+                
+                VStack {
+                    Link(title, destination: URL(string: url)!)
+                        .frame(width: 150)
+                }
+                
+                HStack {
+                    Text("C: \(carbs)g")
+                    Spacer()
+                    Text(nCalories + " cal")
+                }.padding()
+            }.font(Font.custom("Poppins-Medium", size: 15))
+            
         }
     }
 }
@@ -117,6 +173,7 @@ struct GoalCircle: View {
                 .stroke(style: StrokeStyle(lineWidth: 20.0, lineCap: .round, lineJoin: .round))
                 .foregroundColor(Color.green)
         }
+        .frame(width: 150)
     }
     
 }

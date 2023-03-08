@@ -20,7 +20,7 @@ struct CalorieAdder: View {
                     Spacer()
                     TextField("Enter what you ate", text: $userInput)
                         .padding()
-                        .border(CustomColor.myLightGreen)
+                        .border(CustomColor.myDarkGreen)
                     Spacer()
                 }
                 
