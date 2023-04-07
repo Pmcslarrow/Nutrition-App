@@ -13,69 +13,61 @@ struct homepageView: View {
     
     var body: some View {
             TabView {
-                HOMEPAGE(viewModel: viewModel)
+                fitFuelHomepage(viewModel: viewModel)                           // Homepage View
                     .tabItem {
                         Image(systemName: "house")
                         Text("Home")
                     }
                 
-                GoalBuilderView(viewModel: viewModel)
+                RecipeList(viewModel: self.viewModel)                         // Recipe View
                     .tabItem {
-                        Image(systemName: "figure.run")
-                        Text("Goal Achiever")
+                        Image(systemName: "list.bullet")
+                        Text("Recipes")
                     }
                 
-                CalorieAdder(viewModel: viewModel)
+                CalorieAdder(viewModel: viewModel)                              // Profile View
                     .tabItem {
-                        Image(systemName: "plus.app")
-                        Text("Add Calories")
+                        Image(systemName: "person")
+                        Text("Profile")
                     }
-            }            
-    }
-}
-
-// The view that holds the structure of the home page
-struct HOMEPAGE: View {
-    var viewModel: HealthData
-    
-    var body: some View {
-        ZStack {
-            CustomColor.myBackground
-                .ignoresSafeArea()
-            VStack {
-                Text("Homepage")
-                    .padding()
-                    .font(Font.custom("Poppins-Medium", size: 30))
-                cardStats(viewModel: viewModel)
             }
-        }
     }
 }
 
-
-// GRID OF CARDS
-struct cardStats: View {
+struct fitFuelHomepage: View {
     var viewModel: HealthData
-    
-    var statsColumns: [GridItem] {
-      [GridItem(.adaptive(minimum: 150, maximum: 180))]
-    }
     
     var body: some View {
         ScrollView {
-            Spacer()
-            LazyVGrid(columns: statsColumns) {
-                Cardify(TEXT: "Height:" , VALUE: String(format: "%.2f", viewModel.HEIGHT) + " cm")
-                Cardify(TEXT: "Weight:", VALUE: String(format: "%.2f", viewModel.BODY_MASS) + " lbs")
-                Cardify(TEXT: "Age:" , VALUE: String(viewModel.AGE) + " yrs")
-                Cardify(TEXT: "Gender:", VALUE: String(viewModel.GENDER))
-                Cardify(TEXT: "Water:", VALUE: String(format: "%.2f", viewModel.DIETARY_WATER) + " fl oz")
-                Cardify(TEXT: "Steps:", VALUE: String(viewModel.STEP_COUNT))
-                Cardify(TEXT: "Active Energy:", VALUE: String(format: "%.2f", viewModel.ACTIVE_ENERGY_BURNED) + " cal")
-                Cardify(TEXT: "Basal Energy:", VALUE: String(format: "%.2f", viewModel.BASAL_ENERGY_BURNED) + " cal")
-                Cardify(TEXT: "Total Calories Burned:", VALUE: String(format: "%.2f", viewModel.BASAL_ENERGY_BURNED + viewModel.ACTIVE_ENERGY_BURNED) + " cal")
-            }
+            VStack {
+                                                                                //Place fit fuel image here
+                Rectangle()
+                    .frame(width: 175, height: 125)
+                    .foregroundColor(.blue)
+                
+                ScrollView(.horizontal) {
+                    HStack {
+                        Cardify(TEXT: "Calories Burned", VALUE: String(format: "%.1f", viewModel.BASAL_ENERGY_BURNED + viewModel.ACTIVE_ENERGY_BURNED))
+                        Cardify(TEXT: "Water (oz)", VALUE: String(format: "%.1f", viewModel.DIETARY_WATER))
+                        Cardify(TEXT: "Weight (lbs)", VALUE: String(format: "%.1f", viewModel.BODY_MASS))
+
+                    } //HStack
+                }.padding()
+                
+                HStack {
+                    Text("Goal: \(self.viewModel.CURRENT_GOAL)")
+                        .font(Font.custom("Poppins-Medium", size: 35))
+                        .padding()
+                    Spacer()
+                }
+                
+                ZStack {
+                    RoundedRectangle(cornerRadius: 20).foregroundColor(.blue)
+                    GoalCircle(caloriesPerDay: String(format: "%.2f", self.viewModel.TDEE), viewModel: viewModel)
+                }.padding()
+            } //VStack
         }
+        
     }
 }
 
@@ -88,23 +80,20 @@ struct Cardify: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 40, style: .continuous)
-                .fill(CustomColor.myLightGreen)
-                .frame(width: 170, height: 200)
-            RoundedRectangle(cornerRadius: 40, style: .continuous)
-                .stroke(CustomColor.myDarkGreen,lineWidth: 4)
-                .frame(width: 170, height: 200)
-                .padding(.vertical, 5.0)
+                .fill(.blue)
+                .frame(width: 250, height: 200)
+            
             VStack {
-                Text(TEXT).bold()
-                    .font(Font.custom("Poppins-Medium", size: 25))
+                Text(VALUE).bold()
+                    .font(Font.custom("Poppins-Medium", size: 60))
                     .padding(.all, 8.0)
-                    .foregroundColor(.black)
-                Text(VALUE)
-                    .font(Font.custom("Poppins-Medium", size: 15))
-                    .foregroundColor(.black)
-            }.padding()
-        }
-    }
+                    .foregroundColor(.white)
+                Text(TEXT)
+                    .font(Font.custom("Poppins-Medium", size: 18))
+                    .foregroundColor(.white)
+            } //VStack
+        } //ZStack
+    }//body
 }
 
 // PREVIEW

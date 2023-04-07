@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F0F67AB299F3111008D5800 /* recipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0F67AA299F3111008D5800 /* recipeView.swift */; };
 		3F234FEE29A98BCD00CD9C01 /* CalorieAdder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F234FED29A98BCD00CD9C01 /* CalorieAdder.swift */; };
+		3F3916FC29DFB17D00E37684 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3916FB29DFB17D00E37684 /* RecipeList.swift */; };
 		3FC973EE2999F024003944EB /* Nutrition_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC973ED2999F024003944EB /* Nutrition_AppApp.swift */; };
 		3FC973F02999F024003944EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC973EF2999F024003944EB /* ContentView.swift */; };
 		3FC973F22999F025003944EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC973F12999F025003944EB /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		3F0F67AA299F3111008D5800 /* recipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipeView.swift; sourceTree = "<group>"; };
 		3F234FED29A98BCD00CD9C01 /* CalorieAdder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieAdder.swift; sourceTree = "<group>"; };
+		3F3916FB29DFB17D00E37684 /* RecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
 		3FC973EA2999F024003944EB /* Nutrition App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nutrition App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC973ED2999F024003944EB /* Nutrition_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrition_AppApp.swift; sourceTree = "<group>"; };
 		3FC973EF2999F024003944EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				3FC973EF2999F024003944EB /* ContentView.swift */,
 				3FC97403299B5B7C003944EB /* fetchHealthData.swift */,
 				3FC973FF299B5A31003944EB /* homepageView.swift */,
+				3F3916FB29DFB17D00E37684 /* RecipeList.swift */,
 				3F234FED29A98BCD00CD9C01 /* CalorieAdder.swift */,
 				3FEFE124299CC2B400D32F94 /* GoalBuilderView.swift */,
 				3F0F67AA299F3111008D5800 /* recipeView.swift */,
@@ -169,6 +172,7 @@
 				3F234FEE29A98BCD00CD9C01 /* CalorieAdder.swift in Sources */,
 				3F0F67AB299F3111008D5800 /* recipeView.swift in Sources */,
 				3FEFE125299CC2B400D32F94 /* GoalBuilderView.swift in Sources */,
+				3F3916FC29DFB17D00E37684 /* RecipeList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
